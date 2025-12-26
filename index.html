@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ГородТранс — городской автобусный оператор</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-bus"></i></div>
+                <div class="logo-text">
+                    <span class="logo-title">ГородТранс</span>
+                    <span class="logo-subtitle">муниципальные автобусные перевозки</span>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Меню">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="#about" class="nav-link" data-page="about"><i class="fas fa-circle-info"></i> О нас</a></li>
+                    <li><a href="#buses" class="nav-link" data-page="buses"><i class="fas fa-bus"></i> Автопарк</a></li>
+                    <li><a href="#routes" class="nav-link" data-page="routes"><i class="fas fa-route"></i> Маршруты</a></li>
+                    <li><a href="#services" class="nav-link" data-page="services"><i class="fas fa-concierge-bell"></i> Сервисы</a></li>
+                    <li><a href="#reviews" class="nav-link" data-page="reviews"><i class="fas fa-comments"></i> Отзывы</a></li>
+                    <li><a href="#contacts" class="nav-link" data-page="contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li class="nav-divider"></li>
+                    <li><a href="#system" class="nav-link btn-system" data-page="system"><i class="fas fa-user-shield"></i> Система</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-ghost" id="loginBtn"><i class="fas fa-user"></i> <span id="loginBtnLabel">Войти</span></button>
+        </div>
+    </header>
+
+    <section id="home" class="page hero-section active">
+        <div class="hero-grid container">
+            <div class="hero-copy">
+                <p class="eyebrow">С 1972 года</p>
+                <h1>Современный автобусный оператор без задержек и компромиссов</h1>
+                <p class="lede">150 автобусов, 42 маршрута, сертификация ISO 39001 и собственный центр мониторинга. Перевозим безопасно, экологично и вовремя.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary btn-lg" href="#routes" data-page="routes">Посмотреть маршруты</a>
+                    <a class="btn btn-ghost btn-lg" href="#about" data-page="about"><i class="fas fa-play-circle"></i> Узнать о компании</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="150">0</span>
+                        <span class="stat-label">автобусов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="42">0</span>
+                        <span class="stat-label">маршрута</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="50000">0</span>
+                        <span class="stat-label">пассажиров в день</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="badge">Круглосуточный мониторинг</div>
+                <h3>Диспетчерский центр</h3>
+                <p>Контроль движения, графика, технического состояния и обратной связи в одном окне.</p>
+                <ul class="checklist">
+                    <li><i class="fas fa-check"></i> Онлайн-трекинг рейсов</li>
+                    <li><i class="fas fa-check"></i> Предиктивное ТО</li>
+                    <li><i class="fas fa-check"></i> SLA для корпоративных клиентов</li>
+                </ul>
+                <a class="btn btn-secondary btn-full" href="#contacts">Запросить демо</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">О компании</p>
+                    <h2>Инфраструктура, люди и стандарты</h2>
+                    <p class="section-subtitle">Работаем с муниципалитетами, бизнесом и жителями города. Ставим безопасность и комфорт выше всего.</p>
+                </div>
+                <div class="section-actions">
+                    <a class="btn btn-secondary" href="#contacts">Связаться</a>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-history"></i></div>
+                    <h3>История</h3>
+                    <p>Основаны в 1972 году. Сейчас — 150 единиц техники, 3 депо, собственная школа водителей и учебный класс по безопасности.</p>
+                </article>
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-bullseye"></i></div>
+                    <h3>Миссия</h3>
+                    <p>Делать городской транспорт удобным: точные расписания, чистые салоны, доступность для маломобильных пассажиров и предсказуемые тарифы.</p>
+                </article>
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-leaf"></i></div>
+                    <h3>Экология</h3>
+                    <p>Переходим на газомоторные и электроавтобусы, соблюдаем стандарты EURO-5, сокращаем шум и выбросы.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="buses" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Автопарк</p>
+                    <h2>Автобусы на линии</h2>
+                    <p class="section-subtitle">Текущий список техники и статус в работе.</p>
+                </div>
+                <button class="btn btn-primary" data-modal-target="addBusModal"><i class="fas fa-plus"></i> Добавить автобус</button>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>№ борта</th>
+                            <th>Гос. номер</th>
+                            <th>Модель</th>
+                            <th>Год</th>
+                            <th>Пробег</th>
+                            <th>Статус</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="busesTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="routes" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Маршруты</p>
+                    <h2>Основные направления</h2>
+                    <p class="section-subtitle">Расстояния, среднее время и план рейсов.</p>
+                </div>
+                <button class="btn btn-primary" data-modal-target="addRouteModal"><i class="fas fa-plus"></i> Добавить маршрут</button>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Описание</th>
+                            <th>Длина</th>
+                            <th>Сред. время</th>
+                            <th>План рейсов</th>
+                            <th>Автобусов</th>
+                        </tr>
+                    </thead>
+                    <tbody id="routesTableBody"></tbody>
+                </table>
+            </div>
+            <div class="quick-actions">
+                <button class="btn btn-secondary" data-modal-target="addRouteListModal"><i class="fas fa-list-check"></i> Сформировать путевой лист</button>
+                <button class="btn btn-ghost" data-modal-target="addPersonnelModal"><i class="fas fa-user-plus"></i> Добавить сотрудника</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Сервисы</p>
+                    <h2>Для города и бизнеса</h2>
+                    <p class="section-subtitle">Точки входа для пассажиров, подрядчиков и корпоративных клиентов.</p>
+                </div>
+            </div>
+            <div class="cards-grid services">
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-ticket-alt"></i></div>
+                    <h3>Билеты и проезд</h3>
+                    <p>Поддержка транспортных карт, онлайн-покупка билетов, бесконтактная оплата.</p>
+                    <a class="text-link" href="#contacts">Получить консультацию</a>
+                </article>
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-building"></i></div>
+                    <h3>Корпоративные чартеры</h3>
+                    <p>Перевозка сотрудников, событийные рейсы, SLA и выделенная поддержка.</p>
+                    <a class="text-link" href="#contacts">Запросить расчёт</a>
+                </article>
+                <article class="card">
+                    <div class="icon-circle"><i class="fas fa-wheelchair"></i></div>
+                    <h3>Доступность</h3>
+                    <p>Пандусы, крепления для колясок, индикация для слабовидящих и приоритетные места.</p>
+                    <a class="text-link" href="#contacts">Сообщить о потребности</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Отзывы</p>
+                    <h2>Что говорят пассажиры</h2>
+                    <p class="section-subtitle">Реальные впечатления о маршрутах, чистоте и расписании.</p>
+                </div>
+            </div>
+            <div class="reviews-grid" id="reviewsList"></div>
+            <div class="review-form-card">
+                <h3>Оставить отзыв</h3>
+                <form id="reviewForm">
+                    <label>Оценка
+                        <input type="number" id="reviewRating" min="1" max="5" required>
+                    </label>
+                    <label>Комментарий
+                        <textarea id="reviewText" rows="3" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit" id="reviewSubmit">Отправить</button>
+                    <p class="muted small" id="reviewHint">Доступно только для авторизованных пользователей.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="page section">
+        <div class="container contacts-grid">
+            <div>
+                <p class="eyebrow">Контакты</p>
+                <h2>Всегда на связи</h2>
+                <p class="section-subtitle">Диспетчерская — 24/7, офис — по рабочим дням.</p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Транспортная, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@gorodtrans.ru</li>
+                    <li><i class="fas fa-clock"></i> Пн–Пт: 8:00–20:00</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-card">
+                <h3>Напишите нам</h3>
+                <form id="contactForm">
+                    <label>Имя
+                        <input type="text" id="contactName" required>
+                    </label>
+                    <label>Email
+                        <input type="email" id="contactEmail" required>
+                    </label>
+                    <label>Сообщение
+                        <textarea id="contactMessage" rows="4" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="system" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Система</p>
+                    <h2>Внутренние данные</h2>
+                    <p class="section-subtitle">Сводка по автопарку, рейсам и персоналу.</p>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-bus"></i></div>
+                    <div>
+                        <p class="eyebrow">Автобусы</p>
+                        <p class="metric" id="metricBuses">0</p>
+                        <p class="muted">В работе</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-route"></i></div>
+                    <div>
+                        <p class="eyebrow">Маршруты</p>
+                        <p class="metric" id="metricRoutes">0</p>
+                        <p class="muted">Основные</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-clipboard-check"></i></div>
+                    <div>
+                        <p class="eyebrow">Путевые листы</p>
+                        <p class="metric" id="metricRouteLists">0</p>
+                        <p class="muted">За день</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-users"></i></div>
+                    <div>
+                        <p class="eyebrow">Персонал</p>
+                        <p class="metric" id="metricPersonnel">0</p>
+                        <p class="muted">В штате</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div>
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-bus"></i></div>
+                    <div class="logo-text">
+                        <span class="logo-title">ГородТранс</span>
+                        <span class="logo-subtitle">городские автобусы</span>
+                    </div>
+                </div>
+                <p class="muted">Работаем для горожан более 50 лет. Предсказуемое расписание, обновлённый автопарк и дружелюбный сервис.</p>
+            </div>
+            <div>
+                <h4>Разделы</h4>
+                <ul class="footer-menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#buses">Автопарк</a></li>
+                    <li><a href="#routes">Маршруты</a></li>
+                    <li><a href="#services">Сервисы</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Документы</h4>
+                <ul class="footer-menu">
+                    <li><a href="#">Политика безопасности</a></li>
+                    <li><a href="#">Пользовательское соглашение</a></li>
+                    <li><a href="#">Для подрядчиков</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Обратная связь</h4>
+                <p class="muted">Телефон: +7 (495) 123-45-67</p>
+                <p class="muted">Email: info@gorodtrans.ru</p>
+                <p class="muted">Пн–Пт: 8:00–20:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <span class="muted">© 2025 ГородТранс</span>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="addBusModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Добавить автобус</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="addBusForm">
+                <label>№ борта<input type="text" id="busNumber" required></label>
+                <label>Гос. номер<input type="text" id="govNumber" required></label>
+                <label>Модель<input type="text" id="busBrand" required></label>
+                <label>Год<input type="number" id="busYear" min="2000" max="2025" required></label>
+                <label>Пробег (км)<input type="number" id="busMileage" required></label>
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="addRouteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Добавить маршрут</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="addRouteForm">
+                <label>№ маршрута<input type="text" id="routeNum" required></label>
+                <label>Описание<textarea id="routeDescription" rows="3" required></textarea></label>
+                <div class="form-row">
+                    <label>Длина (км)<input type="number" id="routeLength" step="0.1" required></label>
+                    <label>Среднее время (мин)<input type="number" id="routeTime" required></label>
+                </div>
+                <label>План рейсов в день<input type="number" id="routeTrips" required></label>
+                <label>Автобусов на линии<input type="number" id="routeBuses" required></label>
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="addPersonnelModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Добавить сотрудника</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="addPersonnelForm">
+                <label>Табельный номер<input type="text" id="personnelTabNum" required></label>
+                <label>ФИО<input type="text" id="personnelName" required></label>
+                <label>Должность<input type="text" id="personnelPosition" required></label>
+                <div class="form-row">
+                    <label>Дата рождения<input type="date" id="personnelBirthDate" required></label>
+                    <label>Дата приема<input type="date" id="personnelHireDate" required></label>
+                </div>
+                <label>Автобус (если закреплен)<input type="text" id="personnelBus"></label>
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="addRouteListModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Сформировать путевой лист</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="addRouteListForm">
+                <label>Маршрут<input type="text" id="routeListRoute" required></label>
+                <label>Автобус<input type="text" id="routeListBus" required></label>
+                <div class="form-row">
+                    <label>Дата<input type="date" id="routeListDate" required></label>
+                    <label>Рейсов выполнено<input type="number" id="routeListTrips" min="1" required></label>
+                </div>
+                <label>Водитель<input type="text" id="routeListDriver" required></label>
+                <label>Кондуктор<input type="text" id="routeListConductor" required></label>
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Вход</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="loginForm">
+                <label>Email
+                    <input type="email" id="loginEmail" required>
+                </label>
+                <label>Пароль
+                    <input type="password" id="loginPassword" required>
+                </label>
+                <button class="btn btn-primary" type="submit">Войти</button>
+                <p class="muted small">Тестовый доступ: demo@gorodtrans.ru / demo123</p>
+            </form>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
