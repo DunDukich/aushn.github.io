@@ -61,6 +61,7 @@
                             <th>Сред. время</th>
                             <th>План рейсов</th>
                             <th>Автобусов</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody id="routesTableBody"></tbody>
@@ -69,6 +70,63 @@
             <div class="quick-actions">
                 <button class="btn btn-secondary" data-modal-target="addRouteListModal"><i class="fas fa-list-check"></i> Сформировать путевой лист</button>
                 <button class="btn btn-ghost" data-modal-target="addPersonnelModal"><i class="fas fa-user-plus"></i> Добавить сотрудника</button>
+            </div>
+
+            <div class="section-head" style="margin-top:28px;">
+                <div>
+                    <p class="eyebrow">Путевые листы</p>
+                    <h2>Учёт рейсов</h2>
+                    <p class="section-subtitle">Маршрут, борт, дата, выполненные рейсы, экипаж.</p>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Маршрут</th>
+                            <th>Борт</th>
+                            <th>Марка</th>
+                            <th>Гос. номер</th>
+                            <th>Дата</th>
+                            <th>Рейсов</th>
+                            <th>Водитель</th>
+                            <th>Кондуктор</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="routeListsTableBody"></tbody>
+                </table>
+            </div>
+
+            <div class="section-head" style="margin-top:28px;">
+                <div>
+                    <p class="eyebrow">Запросы</p>
+                    <h2>Аналитика по маршрутам</h2>
+                    <p class="section-subtitle">Количество автобусов на маршруте и список бортов на дату.</p>
+                </div>
+            </div>
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>Количество автобусов на маршруте</h3>
+                    <label>Дата
+                        <input type="date" id="queryDate">
+                    </label>
+                    <button class="btn btn-primary" id="queryBusesPerRoute">Показать</button>
+                    <div id="busesPerRouteResults" class="muted" style="margin-top:10px;"></div>
+                </div>
+                <div class="card">
+                    <h3>Автобусы на маршруте</h3>
+                    <div class="form-row">
+                        <label>Маршрут
+                            <input type="text" id="queryRoute">
+                        </label>
+                        <label>Дата
+                            <input type="date" id="queryDate2">
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" id="queryBusesOnRoute">Показать</button>
+                    <div id="busesOnRouteResults" class="muted" style="margin-top:10px;"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -192,10 +250,23 @@
             <form id="addPersonnelForm">
                 <label>Табельный номер<input type="text" id="personnelTabNum" required></label>
                 <label>ФИО<input type="text" id="personnelName" required></label>
+                <label>Категория
+                    <select id="personnelCategory" required>
+                        <option value="">Выберите</option>
+                        <option value="администрация">Администрация</option>
+                        <option value="итр">Инженерно-технический</option>
+                        <option value="обслуживание">Обслуживание маршрутов</option>
+                    </select>
+                </label>
                 <label>Должность<input type="text" id="personnelPosition" required></label>
                 <div class="form-row">
                     <label>Дата рождения<input type="date" id="personnelBirthDate" required></label>
                     <label>Дата приема<input type="date" id="personnelHireDate" required></label>
+                </div>
+                <label>Адрес<input type="text" id="personnelAddress"></label>
+                <div class="form-row">
+                    <label>Телефон дом.<input type="text" id="personnelPhoneHome"></label>
+                    <label>Телефон раб.<input type="text" id="personnelPhoneWork"></label>
                 </div>
                 <label>Автобус (если закреплен)<input type="text" id="personnelBus"></label>
                 <button class="btn btn-primary" type="submit">Сохранить</button>

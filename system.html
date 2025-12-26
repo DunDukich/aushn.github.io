@@ -84,6 +84,45 @@
                     </div>
                 </div>
             </div>
+
+            <div class="section-head" style="margin-top:28px;">
+                <div>
+                    <p class="eyebrow">Персонал</p>
+                    <h2>Штат и категории</h2>
+                    <p class="section-subtitle">Администрация, ИТР и обслуживание маршрутов.</p>
+                </div>
+            </div>
+            <div class="card filter-bar">
+                <div class="chip-group" id="personnelChips">
+                    <button class="chip chip-active" data-category="">Все</button>
+                    <button class="chip" data-category="администрация">Администрация</button>
+                    <button class="chip" data-category="итр">Инженерно-технический</button>
+                    <button class="chip" data-category="обслуживание">Обслуживание маршрутов</button>
+                </div>
+                <div class="filter-actions">
+                    <button class="btn btn-ghost" id="queryAdminStaff">Показать администрацию</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Таб. №</th>
+                            <th>ФИО</th>
+                            <th>Категория</th>
+                            <th>Должность</th>
+                            <th>Дата рождения</th>
+                            <th>Адрес</th>
+                            <th>Тел. дом</th>
+                            <th>Тел. раб</th>
+                            <th>Дата приёма</th>
+                            <th>Борт</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="personnelTableBody"></tbody>
+                </table>
+            </div>
         </div>
     </section>
 
@@ -137,6 +176,39 @@
     </footer>
 
     <div class="toast-container" id="toastContainer"></div>
+
+    <div class="modal" id="addPersonnelModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Добавить сотрудника</h3>
+                <button class="close-modal" aria-label="Закрыть">&times;</button>
+            </div>
+            <form id="addPersonnelForm">
+                <label>Табельный номер<input type="text" id="personnelTabNum" required></label>
+                <label>ФИО<input type="text" id="personnelName" required></label>
+                <label>Категория
+                    <select id="personnelCategory" required>
+                        <option value="">Выберите</option>
+                        <option value="администрация">Администрация</option>
+                        <option value="итр">Инженерно-технический</option>
+                        <option value="обслуживание">Обслуживание маршрутов</option>
+                    </select>
+                </label>
+                <label>Должность<input type="text" id="personnelPosition" required></label>
+                <div class="form-row">
+                    <label>Дата рождения<input type="date" id="personnelBirthDate" required></label>
+                    <label>Дата приема<input type="date" id="personnelHireDate" required></label>
+                </div>
+                <label>Адрес<input type="text" id="personnelAddress"></label>
+                <div class="form-row">
+                    <label>Телефон дом.<input type="text" id="personnelPhoneHome"></label>
+                    <label>Телефон раб.<input type="text" id="personnelPhoneWork"></label>
+                </div>
+                <label>Автобус (если закреплен)<input type="text" id="personnelBus"></label>
+                <button class="btn btn-primary" type="submit">Сохранить</button>
+            </form>
+        </div>
+    </div>
 
     <div class="modal" id="loginModal">
         <div class="modal-content">
