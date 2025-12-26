@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГородТранс — главный экран</title>
+    <title>Система — ГородТранс</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
             </button>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
                     <li><a href="about.html" class="nav-link" data-page="about"><i class="fas fa-circle-info"></i> О нас</a></li>
                     <li><a href="buses.html" class="nav-link" data-page="buses"><i class="fas fa-bus"></i> Автопарк</a></li>
                     <li><a href="routes.html" class="nav-link" data-page="routes"><i class="fas fa-route"></i> Маршруты</a></li>
@@ -34,48 +34,55 @@
                     <li><a href="reviews.html" class="nav-link" data-page="reviews"><i class="fas fa-comments"></i> Отзывы</a></li>
                     <li><a href="contacts.html" class="nav-link" data-page="contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="system.html" class="nav-link btn-system" data-page="system"><i class="fas fa-user-shield"></i> Система</a></li>
+                    <li><a href="system.html" class="nav-link active btn-system" data-page="system"><i class="fas fa-user-shield"></i> Система</a></li>
                 </ul>
             </nav>
             <button class="btn btn-ghost" id="loginBtn"><i class="fas fa-user"></i> <span id="loginBtnLabel">Войти</span></button>
         </div>
     </header>
 
-    <section id="home" class="page hero-section active">
-        <div class="hero-grid container">
-            <div class="hero-copy">
-                <p class="eyebrow">С 1972 года</p>
-                <h1>Современный автобусный оператор без задержек и компромиссов</h1>
-                <p class="lede">150 автобусов, 42 маршрута, сертификация ISO 39001 и собственный центр мониторинга. Перевозим безопасно, экологично и вовремя.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary btn-lg" href="routes.html">Посмотреть маршруты</a>
-                    <a class="btn btn-ghost btn-lg" href="about.html"><i class="fas fa-play-circle"></i> Узнать о компании</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-count="150">0</span>
-                        <span class="stat-label">автобусов</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="42">0</span>
-                        <span class="stat-label">маршрута</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="50000">0</span>
-                        <span class="stat-label">пассажиров в день</span>
-                    </div>
+    <section id="system" class="page section">
+        <div class="container">
+            <div class="section-head">
+                <div>
+                    <p class="eyebrow">Система</p>
+                    <h2>Внутренние данные</h2>
+                    <p class="section-subtitle">Сводка по автопарку, рейсам и персоналу.</p>
                 </div>
             </div>
-            <div class="hero-card">
-                <div class="badge">Круглосуточный мониторинг</div>
-                <h3>Диспетчерский центр</h3>
-                <p>Контроль движения, графика, технического состояния и обратной связи в одном окне.</p>
-                <ul class="checklist">
-                    <li><i class="fas fa-check"></i> Онлайн-трекинг рейсов</li>
-                    <li><i class="fas fa-check"></i> Предиктивное ТО</li>
-                    <li><i class="fas fa-check"></i> SLA для корпоративных клиентов</li>
-                </ul>
-                <a class="btn btn-secondary btn-full" href="contacts.html">Запросить демо</a>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-bus"></i></div>
+                    <div>
+                        <p class="eyebrow">Автобусы</p>
+                        <p class="metric" id="metricBuses">0</p>
+                        <p class="muted">В работе</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-route"></i></div>
+                    <div>
+                        <p class="eyebrow">Маршруты</p>
+                        <p class="metric" id="metricRoutes">0</p>
+                        <p class="muted">Основные</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-clipboard-check"></i></div>
+                    <div>
+                        <p class="eyebrow">Путевые листы</p>
+                        <p class="metric" id="metricRouteLists">0</p>
+                        <p class="muted">За день</p>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <div class="icon-circle small"><i class="fas fa-users"></i></div>
+                    <div>
+                        <p class="eyebrow">Персонал</p>
+                        <p class="metric" id="metricPersonnel">0</p>
+                        <p class="muted">В штате</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

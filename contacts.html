@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ГородТранс — главный экран</title>
+    <title>Контакты — ГородТранс</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,13 +26,13 @@
             </button>
             <nav class="main-nav" id="mainNav">
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="index.html" class="nav-link" data-page="home"><i class="fas fa-home"></i> Главная</a></li>
                     <li><a href="about.html" class="nav-link" data-page="about"><i class="fas fa-circle-info"></i> О нас</a></li>
                     <li><a href="buses.html" class="nav-link" data-page="buses"><i class="fas fa-bus"></i> Автопарк</a></li>
                     <li><a href="routes.html" class="nav-link" data-page="routes"><i class="fas fa-route"></i> Маршруты</a></li>
                     <li><a href="services.html" class="nav-link" data-page="services"><i class="fas fa-concierge-bell"></i> Сервисы</a></li>
                     <li><a href="reviews.html" class="nav-link" data-page="reviews"><i class="fas fa-comments"></i> Отзывы</a></li>
-                    <li><a href="contacts.html" class="nav-link" data-page="contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
+                    <li><a href="contacts.html" class="nav-link active" data-page="contacts"><i class="fas fa-address-book"></i> Контакты</a></li>
                     <li class="nav-divider"></li>
                     <li><a href="system.html" class="nav-link btn-system" data-page="system"><i class="fas fa-user-shield"></i> Система</a></li>
                 </ul>
@@ -41,41 +41,38 @@
         </div>
     </header>
 
-    <section id="home" class="page hero-section active">
-        <div class="hero-grid container">
-            <div class="hero-copy">
-                <p class="eyebrow">С 1972 года</p>
-                <h1>Современный автобусный оператор без задержек и компромиссов</h1>
-                <p class="lede">150 автобусов, 42 маршрута, сертификация ISO 39001 и собственный центр мониторинга. Перевозим безопасно, экологично и вовремя.</p>
-                <div class="hero-actions">
-                    <a class="btn btn-primary btn-lg" href="routes.html">Посмотреть маршруты</a>
-                    <a class="btn btn-ghost btn-lg" href="about.html"><i class="fas fa-play-circle"></i> Узнать о компании</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" data-count="150">0</span>
-                        <span class="stat-label">автобусов</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="42">0</span>
-                        <span class="stat-label">маршрута</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number" data-count="50000">0</span>
-                        <span class="stat-label">пассажиров в день</span>
-                    </div>
+    <section id="contacts" class="page section">
+        <div class="container contacts-grid">
+            <div>
+                <p class="eyebrow">Контакты</p>
+                <h2>Всегда на связи</h2>
+                <p class="section-subtitle">Диспетчерская — 24/7, офис — по рабочим дням.</p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> г. Москва, ул. Транспортная, 15</li>
+                    <li><i class="fas fa-phone"></i> +7 (495) 123-45-67</li>
+                    <li><i class="fas fa-envelope"></i> info@gorodtrans.ru</li>
+                    <li><i class="fas fa-clock"></i> Пн–Пт: 8:00–20:00</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" aria-label="VK"><i class="fab fa-vk"></i></a>
+                    <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="hero-card">
-                <div class="badge">Круглосуточный мониторинг</div>
-                <h3>Диспетчерский центр</h3>
-                <p>Контроль движения, графика, технического состояния и обратной связи в одном окне.</p>
-                <ul class="checklist">
-                    <li><i class="fas fa-check"></i> Онлайн-трекинг рейсов</li>
-                    <li><i class="fas fa-check"></i> Предиктивное ТО</li>
-                    <li><i class="fas fa-check"></i> SLA для корпоративных клиентов</li>
-                </ul>
-                <a class="btn btn-secondary btn-full" href="contacts.html">Запросить демо</a>
+            <div class="contact-form-card">
+                <h3>Напишите нам</h3>
+                <form id="contactForm">
+                    <label>Имя
+                        <input type="text" id="contactName" required>
+                    </label>
+                    <label>Email
+                        <input type="email" id="contactEmail" required>
+                    </label>
+                    <label>Сообщение
+                        <textarea id="contactMessage" rows="4" required></textarea>
+                    </label>
+                    <button class="btn btn-primary" type="submit">Отправить</button>
+                </form>
             </div>
         </div>
     </section>
